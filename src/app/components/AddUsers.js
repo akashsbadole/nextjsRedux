@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addUser } from "../redux/slice";
@@ -15,10 +15,13 @@ export default function AddUsers() {
       <h3>Add User Lists</h3>
       <input
         type="text"
+        className="add-user-input"
         onChange={(e) => setName(e.target.value)}
-        value={name}
+        placeholder="Add New User"
       />
-      <button className="add-user-btn">Add User</button>
+      <button onClick={userDispatch} className="add-user-btn">
+        Add User
+      </button>
     </div>
   );
 }
